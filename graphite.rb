@@ -6,10 +6,4 @@ class Graphite < Formula
 
   depends_on :java => "1.8"
 
-  def install
-    rm_f Dir["bin/*.bat"]
-    libexec.install Dir['*']
-    bin.install_symlink "#{libexec}/#{version}/bin/graphite" => "graphite"
-  end
-
 end
