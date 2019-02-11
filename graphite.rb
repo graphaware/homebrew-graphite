@@ -9,7 +9,7 @@ class Graphite < Formula
   def install
     rm_f Dir["bin/*.bat"]
     libexec.install Dir['*']
-    bin.install_symlink "#{libexec}/{#version}/bin/graphite" => "graphite"
+    bin.install_symlink "#{libexec}/#{version}/bin/graphite" => "graphite"
   end
 
 end
